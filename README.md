@@ -34,8 +34,8 @@ python tags2json.py your/path/to/txts
 python json2tag.py your/path/to/txts --no_waifuc
 ```
 
-> 角色特征的删除依赖tags与words。
-> tags为完全相同匹配，words为末尾相同匹配。
+> 角色特征的删除依赖tags与words。  
+> tags为完全相同匹配，words为末尾相同匹配。  
 > 角色特征的tags与words并不完全完整，如果你发现其他的可以加入的tags或words，请提issue。
 
 ---
@@ -70,9 +70,10 @@ python json2tag.py your/path/to/jsons --keep_artist --keep_characteristic
 No-waifuc usage example:
 ```bash
 # The code will delete the original prompt txt, please try on a small dataset first before trying on a large dataset
-python tags2json.py your/path/to/jsons
-python json2tag.py your/path/to/jsons --no_waifuc
+python tags2json.py your/path/to/txts
+python json2tag.py your/path/to/txts --no_waifuc
 ```
 
-> Deletion of character features depends on tags and words. Tags are for exact match, while words are for matching the end.
+> Deletion of character features depends on tags and words.
+> Tags are for exact match, while words are for matching the end.  
 > The tags and words for character features are not completely exhaustive. If you find any other tags or words that can be added, please raise an issue.
