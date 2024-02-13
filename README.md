@@ -1,4 +1,4 @@
-[跳转到I don't understand Chinese, show me in English](#README)
+[I don't understand Chinese, show me in English](#README)
 # 说明文档
 
 这是一个 README 文件，用于处理 tags。
@@ -11,8 +11,9 @@
 
 tags2json 后续会增加根据路径来增加艺术家名以及角色、系列名等的逻辑。
 
-json2tag 的生成格式为：special_tag（如 1girl）+ character_tag（角色名）+ series_tag（系列名）+ artist_tag（作者名）+ generate_tag（常规）。
-其中 'special_tag' 默认保留，'艺术家名' 默认删除，'角色特征' 默认删除。可以通过使用 --del_special、--keep_artist、--keep_characteristic 来修改。
+json2tag 的生成格式为：special_tag（如 1girl）+ character_tag（角色名）+ series_tag（系列名）+ artist_tag（作者名）+ generate_tag（常规）。  
+其中 'special_tag' 默认保留，'艺术家名' 默认删除，'角色特征' 默认删除。  
+可以通过使用 --del_special、--keep_artist、--keep_characteristic 来修改。
 
 waifuc 使用示例：
 ```bash
@@ -50,8 +51,9 @@ If you need to use content created by wd14 instead of using prompts from danboor
 
 Tags2json will later add logic to add artist names, character names, series names, etc., based on the path.
 
-The generated format of json2tag is: special_tag (such as 1girl) + character_tag (character name) + series_tag (series name) + artist_tag (artist name) + generate_tag (general).
-Where 'special_tag' is kept by default, 'artist name' is deleted by default, and 'character features' are deleted by default. Modifications can be made using --del_special, --keep_artist, --keep_characteristic.
+The generated format of json2tag is: special_tag (such as 1girl) + character_tag (character name) + series_tag (series name) + artist_tag (artist name) + generate_tag (general).  
+Where 'special_tag' is kept by default, 'artist name' is deleted by default, and 'character features' are deleted by default.  
+Modifications can be made using --del_special, --keep_artist, --keep_characteristic.
 
 Usage example for waifuc:
 ```bash
