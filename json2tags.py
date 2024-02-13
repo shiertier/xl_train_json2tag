@@ -115,8 +115,7 @@ def generate_patterns(words_set):
 
 def process_general(general_set):
     # 删除以 words 为结尾的内容
-    #script_path = os.path.abspath(__file__)
-    script_path = r"D:\zhujunjie\prompt\fy.ipynb"
+    script_path = os.path.abspath(__file__)
     script_dir = os.path.dirname(script_path)
     words = get_filter_tags(os.path.join(script_dir,"words.txt"))
     regs = generate_patterns(words)
