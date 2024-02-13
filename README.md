@@ -1,8 +1,6 @@
 [I don't understand Chinese, show me in English](#README)
 # 说明文档
 
-这是一个 README 文件，用于处理 tags。
-
 根据 civitai 的 Chenkin（风吟）要求编写，用于处理标签。
 
 目前通过处理 waifuc 的 json 来实现。代码将去除角色特征，画师名后创建标签。
@@ -41,9 +39,7 @@ python json2tag.py your/path/to/txts --no_waifuc
 ---
 # README
 
-This is a README file used for handling tags.
-
-Written at the request of Chenkin from civitai (Wind Whisper) for tag processing purposes.
+Written at the request of Chenkin from civitai for tag processing purposes.
 
 Currently achieved through processing waifuc's JSON. The code will remove character features and create tags after the artist's name.
 
