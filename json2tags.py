@@ -51,7 +51,7 @@ def compare_and_update_sets(general_set, special_tags_ex):
     general_set.difference_update(common_tags)
 
 def process_prompt(json_file, waifuc, del_characteristic=True, del_artist=True, del_special=False):
-    with open(json_file, 'r') as f:
+    with open(json_file, 'r', encoding='utf-8') as f: 
         data = json.load(f)
     if waifuc:
         # 获取tag信息
@@ -59,15 +59,16 @@ def process_prompt(json_file, waifuc, del_characteristic=True, del_artist=True, 
         tag_character = data['danbooru']['tag_string_character']
         tag_copyright = data['danbooru']['tag_string_copyright']
         tag_artist = data['danbooru']['tag_string_artist']
-        general_set = split_tags(tag_general,waifuc)
-        character_set = split_tags(tag_character,waifuc)
-        series_set = split_tags(tag_copyright,waifuc)
-        artist_set = split_tags(tag_artist,waifuc)
+
     else:
-        general_set = set(data['general_tags'])
-        character_set = set(data['character_tags'])
-        series_set = set(data['series_tags'])
-        artist_set = set(data['artist_tags'])
+        tag_general = ", ".join(data['general_tags'])
+        tag_character = ", ".join(data['character_tags'])
+        tag_copyright = ", ".join(data['series_tags'])
+        tag_artist = ", ".join(data['artist_tags'])
+    general_set = split_tags(tag_general,waifuc)
+    character_set = split_tags(tag_character,waifuc)
+    series_set = split_tags(tag_copyright,waifuc)
+    artist_set = split_tags(tag_artist,waifuc)
     special_tags_ex = {"1girl", "2girls", "3girls", "4girls", "5girls", "6+girls", "multiple girls", "multiple_girls",
                 "1boy", "2boys", "3boys", "4boys", "5boys", "6+boys", "multiple boys", "male focus","multiple_boys", "male_focus"}
     special_set = set()
@@ -89,8 +90,6 @@ def process_prompt(json_file, waifuc, del_characteristic=True, del_artist=True, 
     txt_path = get_txt_path(json_file, waifuc)
     with open(txt_path, 'w', encoding='utf-8') as file:
         file.write(tags_str)
-
-
 
 def get_filter_tags(filter_tags_file):
     # 读取文件内容
@@ -116,7 +115,8 @@ def generate_patterns(words_set):
 
 def process_general(general_set):
     # 删除以 words 为结尾的内容
-    script_path = os.path.abspath(__file__)
+    #script_path = os.path.abspath(__file__)
+    script_path = r"D:\zhujunjie\prompt\fy.ipynb"
     script_dir = os.path.dirname(script_path)
     words = get_filter_tags(os.path.join(script_dir,"words.txt"))
     regs = generate_patterns(words)
