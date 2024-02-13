@@ -4,3 +4,5 @@ eyes
 bangs
 wear
 wears
+tail
+tails
