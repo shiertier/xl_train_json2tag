@@ -68,10 +68,6 @@ def process_prompt(json_file, waifuc, del_characteristic=True, del_artist=True, 
         character_set = set(data['character_tags'])
         series_set = set(data['series_tags'])
         artist_set = set(data['artist_tags'])
-    general_set = split_tags(tag_general,waifuc)
-    character_set = split_tags(tag_character,waifuc)
-    series_set = split_tags(tag_copyright,waifuc)
-    artist_set = split_tags(tag_artist,waifuc)
     special_tags_ex = {"1girl", "2girls", "3girls", "4girls", "5girls", "6+girls", "multiple girls", "multiple_girls",
                 "1boy", "2boys", "3boys", "4boys", "5boys", "6+boys", "multiple boys", "male focus","multiple_boys", "male_focus"}
     special_set = set()
