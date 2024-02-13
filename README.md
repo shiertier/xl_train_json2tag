@@ -30,8 +30,8 @@ python json2tag.py your/path/to/jsons --keep_artist --keep_characteristic
 非 waifuc 使用示例：
 ```bash
 # 代码会删除原有 prompt 的 txt，请在小数据集上尝试后再在大数据集上尝试
-python tags2json.py your/path/to/jsons
-python json2tag.py your/path/to/jsons --no_waifuc
+python tags2json.py your/path/to/txts
+python json2tag.py your/path/to/txts --no_waifuc
 ```
 
 > 角色特征的删除依赖tags与words。
