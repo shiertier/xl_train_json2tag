@@ -16,20 +16,20 @@ json2tag 的生成格式为：special_tag（如 1girl）+ character_tag（角色
 waifuc 使用示例：
 ```bash
 # 查看帮助
-python json2tag.py -h
+python json2tags.py -h
 
 # 常规使用
-python json2tag.py your/path/to/jsons
+python json2tags.py your/path/to/jsons
 
 # 保留艺术家名与角色特征
-python json2tag.py your/path/to/jsons --keep_artist --keep_characteristic
+python json2tags.py your/path/to/jsons --keep_artist --keep_characteristic
 ```
 
 非 waifuc 使用示例：
 ```bash
 # 代码会删除原有 prompt 的 txt，请在小数据集上尝试后再在大数据集上尝试
 python tags2json.py your/path/to/txts
-python json2tag.py your/path/to/txts --no_waifuc
+python json2tags.py your/path/to/txts --no_waifuc
 ```
 
 > 角色特征的删除依赖tags与words。  
@@ -54,20 +54,20 @@ Modifications can be made using --del_special, --keep_artist, --keep_characteris
 Usage example for waifuc:
 ```bash
 # Get help
-python json2tag.py -h
+python json2tags.py -h
 
 # Regular usage
-python json2tag.py your/path/to/jsons
+python json2tags.py your/path/to/jsons
 
 # Keep artist name and character features
-python json2tag.py your/path/to/jsons --keep_artist --keep_characteristic
+python json2tags.py your/path/to/jsons --keep_artist --keep_characteristic
 ```
 
 No-waifuc usage example:
 ```bash
 # The code will delete the original prompt txt, please try on a small dataset first before trying on a large dataset
 python tags2json.py your/path/to/txts
-python json2tag.py your/path/to/txts --no_waifuc
+python json2tags.py your/path/to/txts --no_waifuc
 ```
 
 > Deletion of character features depends on tags and words.
